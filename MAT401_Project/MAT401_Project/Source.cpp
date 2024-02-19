@@ -9,7 +9,7 @@ int main()
 	std::ofstream my_file("test.csv");
 
 	if (my_file.is_open()) {
-		my_file << ("Cheese") << "," << std::endl;
+		my_file << ("Cheese") << "," << ("Bums") <<std::endl;
 	}
 
 	my_file.close();
