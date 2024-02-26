@@ -46,11 +46,7 @@ int main()
 			{
 				my_file << vect[i][j] << ",";
 			}
-
-			if (i == vect[i].size())
-			{
-				std::cout << std::endl;
-			}
+			my_file << std::endl;
 		}
 	}
 
