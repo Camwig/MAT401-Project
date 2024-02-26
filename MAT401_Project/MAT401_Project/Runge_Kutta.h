@@ -13,5 +13,10 @@ private:
 	math_library* maths_;
 
 	float inline function(float x, float y) {return  5.0f * (pow(x,4)); }
+
+	float inline function2(float TE, float T) { 
+		float i = TE - T;
+		return  2*i; 
+		}
 };
 

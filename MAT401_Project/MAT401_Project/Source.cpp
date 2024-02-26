@@ -10,6 +10,8 @@ int main()
 
 	std::printf("Hello World\n");
 
+	
+
 	float y0 = 0.0,
 		x0 = 0.0,
 		xe = 20.0,
@@ -17,11 +19,11 @@ int main()
 
 	std::vector<std::vector<float>> vect;
 
-	vect = r.RK2(1,x0,y0,xe,dx);
+	vect = r.RK2(1,0.1f,37,xe,dx);
 
 	std::printf("Generated values\n");
 
-	std::cout << std::setprecision(8);
+	std::cout << std::setprecision(10);
 
 	for (int i = 0; i < vect.size(); i++)
 	{
@@ -34,7 +36,7 @@ int main()
 
 	std::ofstream my_file("test.csv");
 
-	my_file << std::setprecision(8);
+	my_file << std::setprecision(10);
 
 	if (my_file.is_open()) {
 		//my_file << ("Cheese") << "," << ("Bums") <<std::endl;
@@ -44,7 +46,11 @@ int main()
 			{
 				my_file << vect[i][j] << ",";
 			}
-			std::cout << std::endl;
+
+			if (i == vect[i].size())
+			{
+				std::cout << std::endl;
+			}
 		}
 	}
 
