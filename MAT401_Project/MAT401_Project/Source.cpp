@@ -8,9 +8,7 @@ int main()
 {
 	Runge_Kutta r;
 
-	std::printf("Hello World\n");
-
-	
+	//std::printf("Hello World\n");
 
 	float y0 = 0.0,
 		x0 = 0.0,

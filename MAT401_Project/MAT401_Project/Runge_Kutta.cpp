@@ -28,7 +28,7 @@ std::vector<std::vector<float>> Runge_Kutta::RK4(float x0, float y0, float xe, f
 	{
 		//std::cout << function(x[i-1], 1) << "\n";
 
-		std::cout << std::setprecision(8);
+		//std::cout << std::setprecision(8);
 
 		//std::cout << y[i - 1] << "\n";
 
@@ -44,13 +44,13 @@ std::vector<std::vector<float>> Runge_Kutta::RK4(float x0, float y0, float xe, f
 
 		//y[i] = y[i - 1] + (1.0f/6.0f * (k1 + (2.0f*k2) + (2.0f*k3) + k4));
 
-		float k1 = 1.0f * function(x[i - 1], y[i - 1]);
+		float k1 = dx * function(x[i - 1], y[i - 1]);
 
-		float k2 = 1.0f * function(x[i - 1] + 1.0 / 2.0f, y[i - 1] + /*0.1f**/(k1 / 2.0f));
+		float k2 = dx * function(x[i - 1] + dx / 2.0f, y[i - 1] + /*0.1f**/(k1 / 2.0f));
 
-		float k3 = 1.0f * function(x[i - 1] + 1.0 / 2.0f, y[i - 1] + /*0.1f**/(k2 / 2.0f));
+		float k3 = dx * function(x[i - 1] + dx / 2.0f, y[i - 1] + /*0.1f**/(k2 / 2.0f));
 
-		float k4 = 1.0f * function(x[i - 1] + 1.0, y[i - 1] + /*0.1f**/(k2));
+		float k4 = dx * function(x[i - 1] + dx, y[i - 1] + /*0.1f**/(k2));
 
 		//std::cout << y[i] << "\n";
 
@@ -73,11 +73,11 @@ std::vector<std::vector<float>> Runge_Kutta::RK2(float x0, float y0, float xe, f
 
 	y[0] = y0;
 
-	std::cout << x.size() << "\n";
+	//std::cout << x.size() << "\n";
 
-	std::cout << y.size() << "\n";
+	//std::cout << y.size() << "\n";
 
-	std::cout << std::setprecision(8);
+	//std::cout << std::setprecision(8);
 
 	//float result  = function2(15,29.811);
 
@@ -87,15 +87,15 @@ std::vector<std::vector<float>> Runge_Kutta::RK2(float x0, float y0, float xe, f
 	{
 		//std::cout << function(15, y[i - 1]) << "\n";
 
-		std::cout << std::setprecision(8);
+		//std::cout << std::setprecision(8);
 
 		//std::cout << y[i - 1] << "\n";
 
-		float k1 = 1.0f * function(x[i-1],y[i-1]);
+		float k1 = dx * function(x[i-1],y[i-1]);
 
 		//std::cout << k1 << "\n";
 
-		float k2 = 1.0f * function(x[i - 1] + 1.0/2.0f, y[i - 1] + /*0.1f**/(k1/2.0f));
+		float k2 = dx * function(x[i - 1] + dx/2.0f, y[i - 1] + /*0.1f**/(k1/2.0f));
 		y[i] = y[i - 1] + k2;
 
 		//std::cout << y[i] << "\n";
