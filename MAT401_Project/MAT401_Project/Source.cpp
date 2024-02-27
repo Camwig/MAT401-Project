@@ -15,13 +15,12 @@ int main()
 	float y0 = 0.0,
 		x0 = 0.0,
 		xe = 20.0,
-		dx = 20.0;
+		dx = 1.0;
 
 	std::vector<std::vector<float>> vect;
-
-	vect = r.RK2(1,0.1f,37,xe,dx);
-
-	//vect = r.RK4(0.1f, 37, xe, dx);
+	vect = r.RK4(x0, y0, xe, dx);
+	
+	//vect = r.RK2(x0, y0, xe, dx);
 
 	std::printf("Generated values\n");
 
