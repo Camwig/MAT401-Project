@@ -9,6 +9,7 @@ public:
 	~Runge_Kutta();
 
 	std::vector<std::vector<float>> RK2(float f, float x0, float y0, float xe, float dx);
+	std::vector<std::vector<float>> RK4(float x0, float y0, float xe, float dx);
 private:
 	math_library* maths_;
 

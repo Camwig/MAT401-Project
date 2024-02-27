@@ -21,6 +21,8 @@ int main()
 
 	vect = r.RK2(1,0.1f,37,xe,dx);
 
+	//vect = r.RK4(0.1f, 37, xe, dx);
+
 	std::printf("Generated values\n");
 
 	std::cout << std::setprecision(10);
