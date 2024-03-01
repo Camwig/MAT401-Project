@@ -24,12 +24,18 @@
     <ClCompile Include="math_library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Task_1_and_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Runge_Kutta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="math_library.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_1_and_2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

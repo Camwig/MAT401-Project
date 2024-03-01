@@ -10,6 +10,8 @@ int main()
 
 	//std::printf("Hello World\n");
 
+	//int Inertia_Tensor[3][3];
+
 	float y0 = 0.0,
 		x0 = 0.0,
 		xe = 20.0,
