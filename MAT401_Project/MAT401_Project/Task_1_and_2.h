@@ -10,9 +10,9 @@ public:
 	Task_1_and_2();
 	~Task_1_and_2();
 
-	void Init(float, float, float);
+	void Init(float M, float R, float H);
 
-	void Solve_Task_1(std::vector<std::vector<float>>&, std::vector<std::vector<float>>&, std::vector<std::vector<float>>&,float,float,float,float,float,float);
+	void Solve_Task_1(std::vector<std::vector<float>>& Out_X, std::vector<std::vector<float>>& Out_Y, std::vector<std::vector<float>>& Out_Z, float Initial_X, float Initial_Y, float Initial_Z, float Step, float Start, float End);
 private:
 
 	std::array<float, 3> RK4_Task1(std::array<float,3>&, float, float,float,float);

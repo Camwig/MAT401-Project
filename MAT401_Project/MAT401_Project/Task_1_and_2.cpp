@@ -96,7 +96,7 @@ void Task_1_and_2::Solve_Task_1(std::vector<std::vector<float>>& Out_X, std::vec
 	std::array<float, 3> Results;
 
 
-	for (float i = Start; i <= End; i += Step)
+	for (float i = Start; i <= End-1; i += Step)
 	{
 		//RK4 Step which can then be given to the Output vectors
 
