@@ -19,6 +19,7 @@ std::vector<double> math_library::Generate_Half_open_interval(double step, doubl
 	return output;
 }
 
+//Need to fix this so it works based of the step size and so on
 std::vector<double> math_library::Generate_zeros(double length)
 {
 	std::vector<double> output;

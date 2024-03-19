@@ -2,6 +2,11 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+
+#include <variant>
+#include <cassert>
+
+
 #include "Runge_Kutta.h"
 #include "Task_1_and_2.h"
 
@@ -14,6 +19,8 @@ int main()
 	//std::printf("Hello World\n");
 
 	//int Inertia_Tensor[3][3];
+
+	//Remeber to use a smaller timestep so like 0.01 for example
 
 	double y0 = 0.0,
 		x0 = 1.0,
@@ -35,6 +42,10 @@ int main()
 
 	task_.Init(M,R,H);
 	task_.Solve_Task_1(Out_x,Out_y,Out_z,Omega_0x,Omega_0y,Omega_0z,dx,x0,xe);
+
+	std::variant <std::vector<std::array<double, 3>>, std::vector<double>> Output;
+
+	//std::vector<std::vector<>>
 	
 	//vect = r.RK2(x0, y0, xe, dx);
 
