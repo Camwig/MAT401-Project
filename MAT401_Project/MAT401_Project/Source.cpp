@@ -17,7 +17,7 @@ int main()
 
 	float y0 = 0.0,
 		x0 = 1.0,
-		xe = 2.0/*20.0*/,
+		xe = 5.0/*20.0*/,
 		dx = 1.0;
 
 	//std::vector<std::vector<float>> vect;
@@ -51,23 +51,26 @@ int main()
 		std::cout << std::endl;
 	}
 
-	//for (int i = 0; i < Out_y.size(); i++)
-	//{
-	//	for (int j = 0; j < Out_y[i].size(); j++)
-	//	{
-	//		std::cout << Out_y[i][j] << " ";
-	//	}
-	//	std::cout << std::endl;
-	//}
+	for (int i = 0; i < Out_y.size(); i++)
+	{
+		for (int j = 0; j < Out_y[i].size(); j++)
+		{
+			std::cout << Out_y[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
 
-	//for (int i = 0; i < Out_z.size(); i++)
-	//{
-	//	for (int j = 0; j < Out_z[i].size(); j++)
-	//	{
-	//		std::cout << Out_z[i][j] << " ";
-	//	}
-	//	std::cout << std::endl;
-	//}
+	for (int i = 0; i < Out_z.size(); i++)
+	{
+		for (int j = 0; j < Out_z[i].size(); j++)
+		{
+			std::cout << Out_z[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+
+
+	//Keep the below as that is for outputting to the csv file
 
 	//std::ofstream my_file("test.csv");
 

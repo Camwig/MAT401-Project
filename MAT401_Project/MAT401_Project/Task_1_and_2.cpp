@@ -14,28 +14,32 @@ Task_1_and_2::~Task_1_and_2()
 
 std::array<float,3> Task_1_and_2::RK4_Task1(std::array<float, 3>& Upsilon, float Omega_x, float Omega_y,float Omega_z,float dx)
 {
-	//First Loop Correct 1
+	//Loop 1 Correct
+	//Loop 2 Correct
+	//Loop 3 Correct
+
+	//Should change this to output in doubles as floats cannot hold as much data
 
 	//Will need a k1 to k4 for x,y and z.
-	float k1_x = dx * Equation(Upsilon[0], Omega_y, Omega_z); //1
-	float k1_y = dx * Equation(Upsilon[1], Omega_x, Omega_z); //1
-	float k1_z = dx * Equation(Upsilon[2], Omega_x, Omega_y); //1
+	float k1_x = dx * Equation(Upsilon[0], Omega_y, Omega_z); //1,2,3
+	float k1_y = dx * Equation(Upsilon[1], Omega_x, Omega_z); //1,2,3
+	float k1_z = dx * Equation(Upsilon[2], Omega_x, Omega_y); //1,2,3
 
-	float k2_x = dx * Equation(Upsilon[0], Omega_y + (k1_y / 2.0f), Omega_z + /*0.1f**/(k1_z / 2.0f));//1
-	float k2_y = dx * Equation(Upsilon[1], Omega_x + (k1_x / 2.0f), Omega_z + /*0.1f**/(k1_z / 2.0f));//1
-	float k2_z = dx * Equation(Upsilon[2], Omega_x + (k1_x / 2.0f), Omega_y + /*0.1f**/(k1_y / 2.0f));//1
+	float k2_x = dx * Equation(Upsilon[0], Omega_y + (k1_y / 2.0f), Omega_z + /*0.1f**/(k1_z / 2.0f));//1,2,3
+	float k2_y = dx * Equation(Upsilon[1], Omega_x + (k1_x / 2.0f), Omega_z + /*0.1f**/(k1_z / 2.0f));//1,2,3
+	float k2_z = dx * Equation(Upsilon[2], Omega_x + (k1_x / 2.0f), Omega_y + /*0.1f**/(k1_y / 2.0f));//1,2,3
 
-	float k3_x = dx * Equation(Upsilon[0], Omega_y + (k2_y / 2.0f), Omega_z + /*0.1f**/(k2_z / 2.0f));//1
-	float k3_y = dx * Equation(Upsilon[1], Omega_x + (k2_x / 2.0f), Omega_z + /*0.1f**/(k2_z / 2.0f));//1
-	float k3_z = dx * Equation(Upsilon[2], Omega_x + (k2_x / 2.0f), Omega_y + /*0.1f**/(k2_y / 2.0f));//1
+	float k3_x = dx * Equation(Upsilon[0], Omega_y + (k2_y / 2.0f), Omega_z + /*0.1f**/(k2_z / 2.0f));//1,2,3
+	float k3_y = dx * Equation(Upsilon[1], Omega_x + (k2_x / 2.0f), Omega_z + /*0.1f**/(k2_z / 2.0f));//1,2,3
+	float k3_z = dx * Equation(Upsilon[2], Omega_x + (k2_x / 2.0f), Omega_y + /*0.1f**/(k2_y / 2.0f));//1,2,3
 
-	float k4_x = dx * Equation(Upsilon[0], Omega_y + (k3_y), Omega_z + /*0.1f**/(k3_z));//1
-	float k4_y = dx * Equation(Upsilon[1], Omega_x + (k3_x), Omega_z + /*0.1f**/(k3_z));//1
-	float k4_z = dx * Equation(Upsilon[2], Omega_x + (k3_x), Omega_y + /*0.1f**/(k3_y));//1
+	float k4_x = dx * Equation(Upsilon[0], Omega_y + (k3_y), Omega_z + /*0.1f**/(k3_z));//1,2,3
+	float k4_y = dx * Equation(Upsilon[1], Omega_x + (k3_x), Omega_z + /*0.1f**/(k3_z));//1,2,3
+	float k4_z = dx * Equation(Upsilon[2], Omega_x + (k3_x), Omega_y + /*0.1f**/(k3_y));//1,2,3
 
-	float Ouptut_x = Omega_x + (1.0f / 6.0f * (k1_x + (2.0f * k2_x) + (2.0f * k3_x) + k4_x));//1
-	float Ouptut_y = Omega_x + (1.0f / 6.0f * (k1_y + (2.0f * k2_y) + (2.0f * k3_y) + k4_y));
-	float Ouptut_z = Omega_x + (1.0f / 6.0f * (k1_z + (2.0f * k2_z) + (2.0f * k3_z) + k4_z));
+	float Ouptut_x = Omega_x + (1.0f / 6.0f * (k1_x + (2.0f * k2_x) + (2.0f * k3_x) + k4_x));//1,2,3
+	float Ouptut_y = Omega_y + (1.0f / 6.0f * (k1_y + (2.0f * k2_y) + (2.0f * k3_y) + k4_y));//1,2,3
+	float Ouptut_z = Omega_z + (1.0f / 6.0f * (k1_z + (2.0f * k2_z) + (2.0f * k3_z) + k4_z));//1,2,3
 
 	std::array<float, 3> output;
 	output[0] = Ouptut_x;
