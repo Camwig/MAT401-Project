@@ -10,27 +10,27 @@ public:
 	Task_1_and_2();
 	~Task_1_and_2();
 
-	void Init(float M, float R, float H);
+	void Init(double M, double R, double H);
 
-	void Solve_Task_1(std::vector<std::vector<float>>& Out_X, std::vector<std::vector<float>>& Out_Y, std::vector<std::vector<float>>& Out_Z, float Initial_X, float Initial_Y, float Initial_Z, float Step, float Start, float End);
+	void Solve_Task_1(std::vector<std::vector<double>>& Out_X, std::vector<std::vector<double>>& Out_Y, std::vector<std::vector<double>>& Out_Z, double Initial_X, double Initial_Y, double Initial_Z, double Step, double Start, double End);
 private:
 
-	std::array<float, 3> RK4_Task1(std::array<float,3>&, float, float,float,float);
+	std::array<double, 3> RK4_Task1(std::array<double,3>&, double, double,double,double);
 
-	float inline Equation(float upslion, float Omega_1, float Omega_2)
+	double inline Equation(double upslion, double Omega_1, double Omega_2)
 	{
 		return -1 * (upslion * Omega_1 * Omega_2);
 	}
 
-	std::array<std::array<float, 3>, 3> Inertia_Tensor;
+	std::array<std::array<double, 3>, 3> Inertia_Tensor;
 
-	std::array<float, 3> Centre_of_mass;
+	std::array<double, 3> Centre_of_mass;
 
-	std::array<float, 3> Upsilon;
+	std::array<double, 3> Upsilon;
 
-	std::vector<float> Omega_X;
-	std::vector<float> Omega_Y;
-	std::vector<float> Omega_Z;
+	std::vector<double> Omega_X;
+	std::vector<double> Omega_Y;
+	std::vector<double> Omega_Z;
 
 	math_library* maths_;
 };

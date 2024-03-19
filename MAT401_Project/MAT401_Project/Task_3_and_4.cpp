@@ -12,7 +12,7 @@ Task_3_and_4::~Task_3_and_4()
 	delete maths_;
 }
 
-void Task_3_and_4::Init(std::array<float, 3> Initial_velocity, std::array<float, 3> Initial_position)
+void Task_3_and_4::Init(std::array<double, 3> Initial_velocity, std::array<double, 3> Initial_position)
 {
 	velocity[0][0] = Initial_velocity[0];
 	velocity[1][0] = Initial_velocity[1];
@@ -23,16 +23,16 @@ void Task_3_and_4::Init(std::array<float, 3> Initial_velocity, std::array<float,
 	position[2][0] = Initial_position[2];
 }
 
-float Task_3_and_4::Semi_Implict_Euler(float Initial_Value, float Diffrence, float Step)
+double Task_3_and_4::Semi_Implict_Euler(double Initial_Value, double Diffrence, double Step)
 {
-	float Output = 0.0f;
+	double Output = 0.0f;
 	Output = Initial_Value + (Diffrence * Step);
 	return Output;
 }
 
-void Task_3_and_4::Solve_Task_3(std::array<float, 3> Initial_velocity, std::array<float, 3> Initial_position,std::vector<std::vector<float>>& Out_Vx, std::vector<std::vector<float>>& Out_Vy, std::vector<std::vector<float>>& Out_Vz, std::vector<std::vector<float>>& Out_Px, std::vector<std::vector<float>>& Out_Py, std::vector<std::vector<float>>& Out_Pz, float Step, float Start, float End)
+void Task_3_and_4::Solve_Task_3(std::array<double, 3> Initial_velocity, std::array<double, 3> Initial_position,std::vector<std::vector<double>>& Out_Vx, std::vector<std::vector<double>>& Out_Vy, std::vector<std::vector<double>>& Out_Vz, std::vector<std::vector<double>>& Out_Px, std::vector<std::vector<double>>& Out_Py, std::vector<std::vector<double>>& Out_Pz, double Step, double Start, double End)
 {
-	std::vector<float> Times = maths_->Generate_Half_open_interval(Step, Start, End);
+	std::vector<double> Times = maths_->Generate_Half_open_interval(Step, Start, End);
 
 	velocity[0] = maths_->Generate_zeros(End);
 	velocity[1] = maths_->Generate_zeros(End);
@@ -45,7 +45,7 @@ void Task_3_and_4::Solve_Task_3(std::array<float, 3> Initial_velocity, std::arra
 	Init(Initial_velocity,Initial_position);
 
 
-	for (float i = Start; i <= End - 1; i += Step)
+	for (double i = Start; i <= End - 1; i += Step)
 	{
 		//Semi-implicit Euler
 		velocity[0][i] = Semi_Implict_Euler(velocity[0][i-1],Gravity,Step);

@@ -15,7 +15,7 @@ int main()
 
 	//int Inertia_Tensor[3][3];
 
-	float y0 = 0.0,
+	double y0 = 0.0,
 		x0 = 1.0,
 		xe = 5.0/*20.0*/,
 		dx = 1.0;
@@ -23,15 +23,15 @@ int main()
 	//std::vector<std::vector<float>> vect;
 	//vect = r.RK4(x0, y0, xe, dx);
 
-	float M = 10;
-	float R = 1;
-	float H = 4;
+	double M = 10;
+	double R = 1;
+	double H = 4;
 
-	float Omega_0x = 3, Omega_0y = 1, Omega_0z = 2;
+	double Omega_0x = 3, Omega_0y = 1, Omega_0z = 2;
 
-	std::vector<std::vector<float>> Out_x;
-	std::vector<std::vector<float>> Out_y;
-	std::vector<std::vector<float>> Out_z;
+	std::vector<std::vector<double>> Out_x;
+	std::vector<std::vector<double>> Out_y;
+	std::vector<std::vector<double>> Out_z;
 
 	task_.Init(M,R,H);
 	task_.Solve_Task_1(Out_x,Out_y,Out_z,Omega_0x,Omega_0y,Omega_0z,dx,x0,xe);

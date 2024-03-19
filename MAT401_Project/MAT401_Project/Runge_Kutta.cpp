@@ -13,14 +13,14 @@ Runge_Kutta::~Runge_Kutta()
 	delete maths_;
 }
 
-std::vector<std::vector<float>> Runge_Kutta::RK4(float x0, float y0, float xe, float dx)
+std::vector<std::vector<double>> Runge_Kutta::RK4(double x0, double y0, double xe, double dx)
 {
-	std::vector<std::vector<float>> output;
+	std::vector<std::vector<double>> output;
 
 	//Need to generate values between a start, a stop and using a step
-	std::vector<float> x = maths_->Generate_Half_open_interval(dx, x0, xe);
+	std::vector<double> x = maths_->Generate_Half_open_interval(dx, x0, xe);
 
-	std::vector<float> y = maths_->Generate_zeros(x.size());
+	std::vector<double> y = maths_->Generate_zeros(x.size());
 
 	y[0] = y0;
 
@@ -32,25 +32,25 @@ std::vector<std::vector<float>> Runge_Kutta::RK4(float x0, float y0, float xe, f
 
 		//std::cout << y[i - 1] << "\n";
 
-		//float k1 = 0.1 * function2(15, y[i - 1]);
+		//double k1 = 0.1 * function2(15, y[i - 1]);
 
 		////std::cout << k1 << "\n";
 
-		//float k2 = 0.1 * function2(15 + (0.1 / 2.0f), y[i - 1] + /*0.1f **/ (k1 / 2.0f));
+		//double k2 = 0.1 * function2(15 + (0.1 / 2.0f), y[i - 1] + /*0.1f **/ (k1 / 2.0f));
 
-		//float k3 = 0.1 * function2(15 + (0.1 / 2.0f), y[i - 1] + /*0.1f * */(k2 / 2.0f));
+		//double k3 = 0.1 * function2(15 + (0.1 / 2.0f), y[i - 1] + /*0.1f * */(k2 / 2.0f));
 
-		//float k4 = 0.1 * function2(15 + 0.1, y[i - 1] + /*0.1f **/ (k3));
+		//double k4 = 0.1 * function2(15 + 0.1, y[i - 1] + /*0.1f **/ (k3));
 
 		//y[i] = y[i - 1] + (1.0f/6.0f * (k1 + (2.0f*k2) + (2.0f*k3) + k4));
 
-		float k1 = dx * function(x[i - 1], y[i - 1]);
+		double k1 = dx * function(x[i - 1], y[i - 1]);
 
-		float k2 = dx * function(x[i - 1] + dx / 2.0f, y[i - 1] + /*0.1f**/(k1 / 2.0f));
+		double k2 = dx * function(x[i - 1] + dx / 2.0f, y[i - 1] + /*0.1f**/(k1 / 2.0f));
 
-		float k3 = dx * function(x[i - 1] + dx / 2.0f, y[i - 1] + /*0.1f**/(k2 / 2.0f));
+		double k3 = dx * function(x[i - 1] + dx / 2.0f, y[i - 1] + /*0.1f**/(k2 / 2.0f));
 
-		float k4 = dx * function(x[i - 1] + dx, y[i - 1] + /*0.1f**/(k2));
+		double k4 = dx * function(x[i - 1] + dx, y[i - 1] + /*0.1f**/(k2));
 
 		//std::cout << y[i] << "\n";
 
@@ -62,14 +62,14 @@ std::vector<std::vector<float>> Runge_Kutta::RK4(float x0, float y0, float xe, f
 	return output;
 }
 
-std::vector<std::vector<float>> Runge_Kutta::RK2(float x0, float y0, float xe, float dx)
+std::vector<std::vector<double>> Runge_Kutta::RK2(double x0, double y0, double xe, double dx)
 {
-	std::vector<std::vector<float>> output;
+	std::vector<std::vector<double>> output;
 
 	//Need to generate values between a start, a stop and using a step
-	std::vector<float> x = maths_->Generate_Half_open_interval(dx, x0, xe);
+	std::vector<double> x = maths_->Generate_Half_open_interval(dx, x0, xe);
 
-	std::vector<float> y = maths_->Generate_zeros(x.size());
+	std::vector<double> y = maths_->Generate_zeros(x.size());
 
 	y[0] = y0;
 
@@ -79,7 +79,7 @@ std::vector<std::vector<float>> Runge_Kutta::RK2(float x0, float y0, float xe, f
 
 	//std::cout << std::setprecision(8);
 
-	//float result  = function2(15,29.811);
+	//double result  = function2(15,29.811);
 
 	//std::cout << result << " whatever this is\n";
 
@@ -91,11 +91,11 @@ std::vector<std::vector<float>> Runge_Kutta::RK2(float x0, float y0, float xe, f
 
 		//std::cout << y[i - 1] << "\n";
 
-		float k1 = dx * function(x[i-1],y[i-1]);
+		double k1 = dx * function(x[i-1],y[i-1]);
 
 		//std::cout << k1 << "\n";
 
-		float k2 = dx * function(x[i - 1] + dx/2.0f, y[i - 1] + /*0.1f**/(k1/2.0f));
+		double k2 = dx * function(x[i - 1] + dx/2.0f, y[i - 1] + /*0.1f**/(k1/2.0f));
 		y[i] = y[i - 1] + k2;
 
 		//std::cout << y[i] << "\n";
