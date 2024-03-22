@@ -45,12 +45,11 @@ int main()
 
 	std::variant <std::vector<std::array<double, 3>>, std::vector<double>> Output;
 
-	//std::vector<std::vector<>>
-	
-	//vect = r.RK2(x0, y0, xe, dx);
-
-
 	std::printf("Generated values\n");
+
+	std::ofstream my_file("test.csv");
+
+	my_file << std::setprecision(10);
 
 	std::cout << std::setprecision(10);
 
@@ -59,8 +58,10 @@ int main()
 		for (int j = 0; j < Out_x[i].size(); j++)
 		{
 			std::cout << Out_x[i][j] << " ";
+			my_file << Out_x[i][j] << " ";
 		}
 		std::cout << std::endl;
+		my_file << std::endl;
 	}
 
 	for (int i = 0; i < Out_y.size(); i++)
@@ -68,8 +69,10 @@ int main()
 		for (int j = 0; j < Out_y[i].size(); j++)
 		{
 			std::cout << Out_y[i][j] << " ";
+			my_file << Out_y[i][j] << " ";
 		}
 		std::cout << std::endl;
+		my_file << std::endl;
 	}
 
 	for (int i = 0; i < Out_z.size(); i++)
@@ -77,9 +80,13 @@ int main()
 		for (int j = 0; j < Out_z[i].size(); j++)
 		{
 			std::cout << Out_z[i][j] << " ";
+			my_file << Out_z[i][j] << " ";
 		}
 		std::cout << std::endl;
+		my_file << std::endl;
 	}
+
+	my_file.close();
 
 
 	//Keep the below as that is for outputting to the csv file

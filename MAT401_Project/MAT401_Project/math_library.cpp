@@ -46,7 +46,7 @@ std::vector<std::vector<double>> math_library::Matrix_multiplication(std::vector
 			rslt[i][j] = 0;
 
 			for (int k = 0; k < R2; k++) {
-				rslt[i][j] += Matrix_1[i][k] * Matrix_2[k][j];
+				rslt[i][j] += Matrix_1[i][k] * 1/*Matrix_2[k][j]*/;
 			}
 		}
 	}
