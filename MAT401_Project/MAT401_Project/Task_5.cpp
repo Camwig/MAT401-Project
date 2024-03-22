@@ -16,9 +16,16 @@ Task_5::~Task_5()
 
 void Task_5::Set_rotation_matrix(double alpha, double beta, double gamma, double theta)
 {
-	Rotation_Matrix = { (pow(alpha,2))*(1 - cos(theta)) + cos(theta),	0,	0,
-					    0,	0,	0,
-					    0,	0,  0 };
+	//Rotation_Matrix = { (pow(alpha,2))*(1 - cos(theta)) + cos(theta),				(alpha*beta)*(1-cos(theta)+(gamma*sin(theta))),				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),	0,
+	//					(alpha * beta)* (1 - cos(theta) + (gamma * sin(theta))),	(pow(beta,2))* (1 - cos(theta)) + cos(theta),				(beta * gamma)* (1 - cos(theta) + (alpha * sin(theta))),	0,
+	//					(alpha * gamma)* (1 - cos(theta) + (beta * sin(theta))),	(beta * gamma)* (1 - cos(theta) + (alpha * sin(theta))),	(pow(gamma,2))* (1 - cos(theta)) + cos(theta),				0,
+	//					0,															0,											0,																			1};
+	
+	//Should be okay as I beleive that sin and cos are expecting radian based inputs for themselves but rember that is the case
+
+	Rotation_Matrix = { (pow(alpha,2)) * (1 - cos(theta)) + cos(theta),				(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),
+					(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),	(pow(beta,2)) * (1 - cos(theta)) + cos(theta),								(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),
+					(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),	(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),					(pow(gamma,2)) * (1 - cos(theta)) + cos(theta)			};
 }
 
 //Pass in by refrence so Im not copying all this stuff over constantly
@@ -36,6 +43,9 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 	Resultant[0] = maths_->Generate_zeros(End);
 	Resultant[1] = maths_->Generate_zeros(End);
 	Resultant[2] = maths_->Generate_zeros(End);
+
+	//This below is disgusting and should be changed please I beg you!!!!!
+	//--------------------------------------------------------------------------
 
 	std::vector<double> pos_values_x = maths_->Generate_zeros(End);
 	std::vector<double> vel_values_x = maths_->Generate_zeros(End);
@@ -100,11 +110,57 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 		break;
 	}
 
+	std::vector<double> ome_values_x = maths_->Generate_zeros(End);
+	std::vector<double> ome_values_y = maths_->Generate_zeros(End);
+	std::vector<double> ome_values_z = maths_->Generate_zeros(End);
+
+	for (int i = 0; i < Omega_x.size(); i++)
+	{
+		for (int j = 0; j < Omega_x[i].size(); j++)
+		{
+			ome_values_x[j] = Omega_x[i][j];
+		}
+		break;
+	}
+
+	for (int i = 0; i < Omega_y.size(); i++)
+	{
+		for (int j = 0; j < Omega_y[i].size(); j++)
+		{
+			ome_values_y[j] = Omega_y[i][j];
+		}
+		break;
+	}
+
+	for (int i = 0; i < Omega_z.size(); i++)
+	{
+		for (int j = 0; j < Omega_z[i].size(); j++)
+		{
+			ome_values_x[j] = Omega_z[i][j];
+		}
+		break;
+	}
+
+	//--------------------------------------------------------------------------
+	float theta, alpha, beta, gamma,magnitude;
+
 	for (double i = Start; i <= End - 1; i += Step)
 	{
 		//Need to do the full matrix additive stuff but it makes more sense to do all the x,y and z values as matrix at a time
 
 		//(Rotation_Matrix * New_output_x[i - 1])
+
+		//Need to setup the rotation matrix
+		
+		magnitude = sqrt(pow(ome_values_x[i], 2) + pow(ome_values_y[i], 2) + pow(ome_values_z[i], 2));
+		//Theta outputs as radians
+		theta = magnitude*Step;
+
+		alpha = ome_values_x[i] / magnitude;
+		beta = ome_values_y[i] / magnitude;
+		gamma= ome_values_z[i] / magnitude;
+
+		Set_rotation_matrix(alpha,beta,gamma,theta);
 
 		New_output_x[i] = pos_values_x [i]+ (Step * vel_values_x[i]);
 		New_output_y[i] = pos_values_y[i] + (Step * vel_values_y[i]);
@@ -120,9 +176,7 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 
 		std::vector<std::vector<double>> New_Output = {Row,Column};
 
-		std::vector<std::vector<double>> Result = maths_->Matrix_multiplication(New_Output, Rotation_Matrix,Row.size(),Column.size(),3,3);
-
-		
+		std::vector<std::vector<double>> Result = maths_->Matrix_multiplication(New_Output, Rotation_Matrix,Row.size(),Column.size(),4,4);
 
 		for (int z = 0; z < Result.size(); i++)
 		{
