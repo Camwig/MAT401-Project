@@ -11,7 +11,7 @@ math_library::~math_library()
 std::vector<double> math_library::Generate_Half_open_interval(double step, double start, double end)
 {
 	std::vector<double> output;
-	for (float i = start; i < end+step; i+=step)
+	for (float i = start; i <= end; i+=step)
 	{
 		////std::cout << "Generating values :" << i << "\n";
 		output.push_back(i);
@@ -23,7 +23,7 @@ std::vector<double> math_library::Generate_Half_open_interval(double step, doubl
 std::vector<double> math_library::Generate_zeros(double length)
 {
 	std::vector<double> output;
-	for (float i = 1; i <= length; i++)
+	for (float i = 0; i <= length; i++)
 	{
 		//std::cout << "Generating values :" << i << "\n";
 		output.push_back(0);
@@ -32,7 +32,20 @@ std::vector<double> math_library::Generate_zeros(double length)
 	return output;
 }
 
-std::vector<std::vector<double>> math_library::Matrix_multiplication(std::vector<std::vector<double>>& Matrix_1, std::array<std::array<double, 3>, 3>& Matrix_2, int R1,int C1, int R2,int C2)
+//Need to fix this so it works based of the step size and so on
+std::vector<double> math_library::Generate_zeros(double length,double step)
+{
+	std::vector<double> output;
+	for (float i = 0; i <= length; i+= step)
+	{
+		//std::cout << "Generating values :" << i << "\n";
+		output.push_back(0);
+	}
+	//std::printf("Done\n");
+	return output;
+}
+
+std::vector<std::vector<double>> math_library::Matrix_multiplication(std::vector<std::vector<double>>& Matrix_1, std::vector<std::vector<double>>& Matrix_2, int R1,int C1, int R2,int C2)
 {
 
 	std::vector<std::vector<double>> rslt;
@@ -46,7 +59,7 @@ std::vector<std::vector<double>> math_library::Matrix_multiplication(std::vector
 			rslt[i][j] = 0;
 
 			for (int k = 0; k < R2; k++) {
-				rslt[i][j] += Matrix_1[i][k] * 1/*Matrix_2[k][j]*/;
+				rslt[i][j] += Matrix_1[i][k] * Matrix_2[k][j];
 			}
 		}
 	}

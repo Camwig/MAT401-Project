@@ -3,6 +3,10 @@
 Task_5::Task_5()
 {
 	maths_ = new math_library();
+	std::vector<double> new_x = maths_->Generate_zeros(3);
+	std::vector<double> new_y = maths_->Generate_zeros(3);
+
+	Rotation_Matrix = { new_x,new_y };
 }
 
 Task_5::~Task_5()
@@ -23,9 +27,22 @@ void Task_5::Set_rotation_matrix(double alpha, double beta, double gamma, double
 	
 	//Should be okay as I beleive that sin and cos are expecting radian based inputs for themselves but rember that is the case
 
-	Rotation_Matrix = { (pow(alpha,2)) * (1 - cos(theta)) + cos(theta),				(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),
-					(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),	(pow(beta,2)) * (1 - cos(theta)) + cos(theta),								(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),
-					(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),	(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),					(pow(gamma,2)) * (1 - cos(theta)) + cos(theta)			};
+	Rotation_Matrix[0][0] = (pow(alpha, 2)) * (1 - cos(theta)) + cos(theta);
+	Rotation_Matrix[0][1] = (alpha * beta) * (1 - cos(theta) + (gamma * sin(theta)));
+	Rotation_Matrix[0][2] = (alpha * gamma) * (1 - cos(theta) + (beta * sin(theta)));
+
+	Rotation_Matrix[1][0] = (alpha * beta) * (1 - cos(theta) + (gamma * sin(theta)));
+	Rotation_Matrix[1][1] = (pow(beta, 2)) * (1 - cos(theta)) + cos(theta);
+	Rotation_Matrix[1][2] = (beta * gamma) * (1 - cos(theta) + (alpha * sin(theta)));
+
+	Rotation_Matrix[2][0] = (alpha * gamma) * (1 - cos(theta) + (beta * sin(theta)));
+	Rotation_Matrix[2][1] = (beta * gamma) * (1 - cos(theta) + (alpha * sin(theta)));
+	Rotation_Matrix[2][2] = (pow(gamma, 2)) * (1 - cos(theta)) + cos(theta);
+
+
+	//Rotation_Matrix = { (pow(alpha,2)) * (1 - cos(theta)) + cos(theta),				(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),
+	//				(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),	(pow(beta,2)) * (1 - cos(theta)) + cos(theta),								(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),
+	//				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),	(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),					(pow(gamma,2)) * (1 - cos(theta)) + cos(theta)			};
 
 	//Rotation_Matrix.at[0];
 }

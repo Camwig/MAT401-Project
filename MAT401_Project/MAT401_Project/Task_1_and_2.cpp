@@ -91,9 +91,9 @@ void Task_1_and_2::Solve_Task_1(std::vector<std::vector<double>>& Out_X, std::ve
 	std::vector<double> Times = maths_->Generate_Half_open_interval(Step, Start, End);
 
 	//Set the intial value for these
-	Omega_X = maths_->Generate_zeros(End);
-	Omega_Y = maths_->Generate_zeros(End);
-	Omega_Z = maths_->Generate_zeros(End);
+	Omega_X = maths_->Generate_zeros(End,Step);
+	Omega_Y = maths_->Generate_zeros(End, Step);
+	Omega_Z = maths_->Generate_zeros(End, Step);
 
 	Omega_X[0] = Initial_X;
 	Omega_Y[0] = Initial_Y;
@@ -101,8 +101,15 @@ void Task_1_and_2::Solve_Task_1(std::vector<std::vector<double>>& Out_X, std::ve
 
 	std::array<double, 3> Results;
 
+	double Multiple = 1;
 
-	for (double i = Start; i <= End-1; i += Step)
+	if (Step < 1)
+	{
+		Multiple = 1 / Step;
+	}
+
+
+	for (double i = (Start + Step)*Multiple; i < (End*Multiple); i += (Step*Multiple))
 	{
 		//RK4 Step which can then be given to the Output vectors
 
