@@ -511,7 +511,7 @@ void Task_5_()
 
 	task_3->Solve_Task_5(Out_Omx, Out_Omy, Out_Omz, Out_px, Out_py, Out_pz, Out_vx, Out_vy, Out_vz,dx,x0,xe, Final_Out);
 
-	std::variant <std::vector<std::array<double, 3>>, std::vector<double>> Output;
+	//std::variant <std::vector<std::array<double, 3>>, std::vector<double>> Output;
 
 	std::cout << std::setprecision(10);
 

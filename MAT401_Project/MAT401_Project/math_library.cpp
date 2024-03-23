@@ -49,19 +49,35 @@ std::vector<std::vector<double>> math_library::Matrix_multiplication(std::vector
 {
 
 	std::vector<std::vector<double>> rslt;
-	std::vector<double> rslt_1 = Generate_zeros(R1);
-	std::vector<double> rslt_2 = Generate_zeros(C2);
+	//std::vector<double> rslt_1 = Generate_zeros(C1-1);
+	//std::vector<double> rslt_2 = Generate_zeros(R1 -1);
 
-	rslt = { rslt_1,rslt_2 };
+	//rslt = { rslt_1,rslt_2 };
 
-	for (int i = 0; i < R1; i++) {
-		for (int j = 0; j < C2; j++) {
-			rslt[i][j] = 0;
+	rslt = { {0.0},{0.0},{0.0} };
 
-			for (int k = 0; k < R2; k++) {
-				rslt[i][j] += Matrix_1[i][k] * Matrix_2[k][j];
-			}
+	//Issue with the matrix multiplication
+
+	//for (int i = 0; i < C1; i++) {
+	//	for (int j = 0; j < R2; j++) {
+	//		//rslt[i][j] = 0;
+
+	//		for (int k = 0; k < C2; k++) {
+	//			rslt[k][j] += Matrix_1[i][j] * Matrix_2[j][k];
+	//		}
+	//	}
+	//}
+
+	for (int j = 0; j < R1; j++)
+	{
+		//float value = 0;
+		//rslt[0][R2] = (Matrix_1[0][1] * Matrix_2[i][j]);
+		for (int k = 0; k < C2; k++)
+		{
+			rslt[j][0] += Matrix_1[k][0] * Matrix_2[j][k];
+			//rslt[j][0];
 		}
+
 	}
 
 	return rslt;
