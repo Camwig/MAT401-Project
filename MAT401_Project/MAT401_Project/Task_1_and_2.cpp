@@ -109,7 +109,7 @@ void Task_1_and_2::Solve_Task_1(std::vector<std::vector<double>>& Out_X, std::ve
 	}
 
 
-	for (double i = (Start + Step)*Multiple; i < (End*Multiple); i += (Step*Multiple))
+	for (double i = (Start + Step)*Multiple; i <= (End*Multiple); i += (Step*Multiple))
 	{
 		//RK4 Step which can then be given to the Output vectors
 

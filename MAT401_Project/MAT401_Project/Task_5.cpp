@@ -48,7 +48,7 @@ void Task_5::Set_rotation_matrix(double alpha, double beta, double gamma, double
 }
 
 //Pass in by refrence so Im not copying all this stuff over constantly
-void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector<std::vector<double>>& Omega_y, std::vector<std::vector<double>>& Omega_z, std::vector<std::vector<double>>& Position_x, std::vector<std::vector<double>>& Position_y, std::vector<std::vector<double>>& Position_z, std::vector<std::vector<double>>& Velocity_x, std::vector<std::vector<double>>& Velocity_y, std::vector<std::vector<double>>& Velocity_z, double Step, double Start, double End, std::variant <std::vector<std::array<double, 3>>>& Output)
+void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector<std::vector<double>>& Omega_y, std::vector<std::vector<double>>& Omega_z, std::vector<std::vector<double>>& Position_x, std::vector<std::vector<double>>& Position_y, std::vector<std::vector<double>>& Position_z, std::vector<std::vector<double>>& Velocity_x, std::vector<std::vector<double>>& Velocity_y, std::vector<std::vector<double>>& Velocity_z, double Step, double Start, double End, std::array<std::vector<double>, 3>& Output)
 {
 	std::vector<double> Times = maths_->Generate_Half_open_interval(Step, Start, End);
 
@@ -211,6 +211,9 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 	Resultant[0] = New_output_x;
 	Resultant[1] = New_output_y;
 	Resultant[2] = New_output_z;
+
+	Output = Resultant;
+
 
 	//omega = {alpha,beta,gamma}
 

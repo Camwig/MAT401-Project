@@ -463,9 +463,180 @@ void Task_4()
 	delete maths;
 }
 
+void Task_5_()
+{
+	//Runge_Kutta r;
+	Task_1_and_2* task_1;
+	Task_3_and_4* task_2;
+	Task_5* task_3;
+	math_library* maths;
+
+	maths = new math_library();
+
+	task_1 = new Task_1_and_2();
+	task_2 = new Task_3_and_4();
+	task_3 = new Task_5;
+
+	double y0 = 0.0,
+		x0 = 0.0,
+		xe = /*20.0*/5.0,
+		dx = /*0.1;*/1.0;
+
+	double M = 10;
+	double R = 1;
+	double H = 4;
+
+	double Omega_0x = 3, Omega_0y = 1, Omega_0z = 2;
+
+	std::vector<std::vector<double>> Out_Omx;
+	std::vector<std::vector<double>> Out_Omy;
+	std::vector<std::vector<double>> Out_Omz;
+
+	std::array<double, 3> Initial_velocity = { 0,0,200 };
+	std::array<double, 3> Initial_position = { 0,(3*R)/4,0 };
+
+	std::vector<std::vector<double>> Out_vx;
+	std::vector<std::vector<double>> Out_vy;
+	std::vector<std::vector<double>> Out_vz;
+
+	std::vector<std::vector<double>> Out_px;
+	std::vector<std::vector<double>> Out_py;
+	std::vector<std::vector<double>> Out_pz;
+
+	std::array<std::vector<double>, 3> Final_Out;
+
+	task_1->Init(M, R, H);
+	task_1->Solve_Task_1(Out_Omx, Out_Omy, Out_Omz, Omega_0x, Omega_0y, Omega_0z, dx, x0, xe);
+	task_2->Solve_Task_3(Initial_velocity, Initial_position, Out_vx, Out_vy, Out_vz, Out_px, Out_py, Out_pz, dx, x0, xe);
+
+	task_3->Solve_Task_5(Out_Omx, Out_Omy, Out_Omz, Out_px, Out_py, Out_pz, Out_vx, Out_vy, Out_vz,dx,x0,xe, Final_Out);
+
+	std::variant <std::vector<std::array<double, 3>>, std::vector<double>> Output;
+
+	std::cout << std::setprecision(10);
+
+	std::vector<double> Output_Px = maths->Generate_zeros(xe, dx);
+	std::vector<double> Output_Py = maths->Generate_zeros(xe, dx);
+	std::vector<double> Output_Pz = maths->Generate_zeros(xe, dx);
+
+	std::vector<double> Output_Time = maths->Generate_Half_open_interval(dx, x0, xe);
+
+
+	std::printf("Displacement X\n");
+	std::cout << std::endl;
+
+	for (int i = 0; i < Final_Out[0].size(); i++)
+	{
+		std::cout << Final_Out[0].at(i) << " ";
+		Output_Px[i] = Final_Out[0].at(i);
+
+		std::cout << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::printf("Displacement Y\n");
+	std::cout << std::endl;
+
+	for (int i = 0; i < Final_Out[1].size(); i++)
+	{
+		std::cout << Final_Out[1].at(i) << " ";
+		Output_Py[i] = Final_Out[1].at(i);
+
+		std::cout << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::printf("Displacement Z\n");
+	std::cout << std::endl;
+
+	for (int i = 0; i < Final_Out[2].size(); i++)
+	{
+		std::cout << Final_Out[2].at(i) << " ";
+		Output_Pz[i] = Final_Out[2].at(i);
+
+		std::cout << std::endl;
+	}
+
+	std::cout << std::endl;
+
+
+	std::printf("Generated values\n");
+
+	std::ofstream my_file("test.csv");
+
+	my_file << std::setprecision(10);
+
+	my_file << "Diplacement X";
+
+	my_file << ",";
+
+	my_file << "Time";
+
+	my_file << std::endl;
+
+	for (int i = 0; i < Output_Px.size(); i++)
+	{
+		my_file << Output_Px[i] << ",";
+		my_file << Output_Time[i] << std::endl;
+	}
+
+	my_file << std::endl;
+	my_file << std::endl;
+
+	my_file << "Diplacement Y";
+
+	my_file << ",";
+
+	my_file << "Time";
+
+	my_file << std::endl;
+
+	for (int i = 0; i < Output_Py.size(); i++)
+	{
+		my_file << Output_Py[i] << ",";
+		my_file << Output_Time[i] << std::endl;
+	}
+
+	my_file << std::endl;
+	my_file << std::endl;
+
+	my_file << "Diplacement Z";
+
+	my_file << ",";
+
+	my_file << "Time";
+
+	my_file << std::endl;
+
+	for (int i = 0; i < Output_Pz.size(); i++)
+	{
+		my_file << Output_Pz[i] << ",";
+		my_file << Output_Time[i] << std::endl;
+	}
+
+	my_file << std::endl;
+	my_file << std::endl;
+
+	my_file.close();
+
+	maths = nullptr;
+	delete maths;
+
+	task_1 = nullptr;
+	delete task_1;
+
+	task_2 = nullptr;
+	delete task_2;
+
+	task_3 = nullptr;
+	delete task_3;
+
+}
+
 int main()
 {
-	Task_2();
+	//Task_2();
 	//Task_4();
+	Task_5_();
 	return 0;
 }
