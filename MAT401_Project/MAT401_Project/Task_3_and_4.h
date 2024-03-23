@@ -16,7 +16,7 @@ public:
 private:
 	std::array<std::vector<double>, 3> velocity;
 	std::array<std::vector<double>, 3> position;
-	const double Gravity = -9.8f;
+	const std::array<double, 3> Gravity = { 0,0,-9.8f };
 	math_library* maths_;
 };
 
