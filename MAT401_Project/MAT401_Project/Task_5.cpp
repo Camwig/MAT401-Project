@@ -42,9 +42,9 @@ void Task_5::Set_rotation_matrix(double alpha, double beta, double gamma, double
 	//Rotation_Matrix[2][2] = (pow(gamma, 2)) * (1 - cos(theta)) + cos(theta);
 
 
-	Rotation_Matrix	=	{{ (pow(alpha,2)) * (1 - cos(theta)) + cos(theta),				(alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))) },
-						{ (alpha * beta) * (1 - cos(theta) + (gamma * sin(theta))),		(pow(beta,2)) * (1 - cos(theta)) + cos(theta),								(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))) },
-						{ (alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),		(beta * gamma) * (1 - cos(theta) + (alpha * sin(theta))),					(pow(gamma,2)) * (1 - cos(theta)) + cos(theta) }};
+	Rotation_Matrix	=	{{ ((alpha*alpha) * (1 - cos(theta))) + cos(theta),				((alpha * beta) * (1 - cos(theta))) - (gamma * sin(theta)),					((alpha * gamma) * (1 - cos(theta)) + (beta * sin(theta))) },
+						{ ((alpha * beta) * (1 - cos(theta))) + (gamma * sin(theta)),		((beta*beta) * (1 - cos(theta))) + cos(theta),								((beta * gamma) * (1 - cos(theta))) - (alpha * sin(theta)) },
+						{ ((alpha * gamma) * (1 - cos(theta))) - (beta * sin(theta)),		((beta * gamma) * (1 - cos(theta))) + (alpha * sin(theta)),					((gamma*gamma) * (1 - cos(theta))) + cos(theta) }};
 
 	//Rotation_Matrix.at[0];
 }
