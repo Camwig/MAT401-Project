@@ -157,7 +157,7 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 	{
 		for (int j = 0; j < Omega_z[i].size(); j++)
 		{
-			ome_values_x[j] = Omega_z[i][j];
+			ome_values_z[j] = Omega_z[i][j];
 		}
 		break;
 	}
@@ -182,7 +182,8 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 		
 		magnitude = sqrt(pow(ome_values_x[i-1], 2) + pow(ome_values_y[i-1], 2) + pow(ome_values_z[i-1], 2));
 		//Theta outputs as radians
-		theta = magnitude*Step;
+		//theta = magnitude * (Step);
+		theta = magnitude*(i);
 
 		alpha = ome_values_x[i-1] / magnitude;
 		beta = ome_values_y[i-1] / magnitude;
@@ -190,9 +191,15 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 
 		Set_rotation_matrix(alpha,beta,gamma,theta);
 
-		New_output_x[i] = pos_values_x [i-1]+ (Step * vel_values_x[i-1]);
-		New_output_y[i] = pos_values_y[i-1] + (Step * vel_values_y[i-1]);
-		New_output_y[i] = pos_values_z[i-1] + (Step * vel_values_z[i-1]);
+		New_output_x[i] = pos_values_x[i-1] /*+ (Step * vel_values_x[i])*/;
+		New_output_y[i] = pos_values_y[i-1] /*+ (Step * vel_values_y[i])*/;
+		New_output_y[i] = pos_values_z[i-1] /*+ (Step * vel_values_z[i])*/;
+
+		//Something is wrong here
+
+		//New_output_x[i] = ome_values_x[i - 1] /*+ (Step * vel_values_x[i])*/;
+		//New_output_y[i] = ome_values_y[i - 1] /*+ (Step * vel_values_y[i])*/;
+		//New_output_y[i] = ome_values_z[i - 1] /*+ (Step * vel_values_z[i])*/;
 
 		std::vector<double> Row = maths_->Generate_zeros(2);
 
@@ -203,6 +210,8 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 		//std::vector<double> Column = maths_->Generate_zeros(0);
 
 		std::vector<std::vector<double>> New_Output = { {Row[0]},{Row[1]},{Row[2]} };
+
+
 
 		std::vector<std::vector<double>> Result = maths_->Matrix_multiplication(New_Output, Rotation_Matrix,Row.size(),1,3,3);
 

@@ -11,7 +11,7 @@ math_library::~math_library()
 std::vector<double> math_library::Generate_Half_open_interval(double step, double start, double end)
 {
 	std::vector<double> output;
-	for (float i = start; i <= end; i+=step)
+	for (float i = start; i <= end + step; i+=step)
 	{
 		////std::cout << "Generating values :" << i << "\n";
 		output.push_back(i);
@@ -36,7 +36,7 @@ std::vector<double> math_library::Generate_zeros(double length)
 std::vector<double> math_library::Generate_zeros(double length,double step)
 {
 	std::vector<double> output;
-	for (float i = 0; i <= length; i+= step)
+	for (float i = 0; i <= length + step; i+= step)
 	{
 		//std::cout << "Generating values :" << i << "\n";
 		output.push_back(0);

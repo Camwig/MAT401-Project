@@ -479,8 +479,8 @@ void Task_5_()
 
 	double y0 = 0.0,
 		x0 = 0.0,
-		xe = /*20.0*/5.0,
-		dx = /*0.1;*/1.0;
+		xe = 20.0/*5.0*/,
+		dx = 0.1;/*1.0*/;
 
 	double M = 10;
 	double R = 1;
@@ -508,7 +508,7 @@ void Task_5_()
 	task_1->Init(M, R, H);
 	task_1->Solve_Task_1(Out_Omx, Out_Omy, Out_Omz, Omega_0x, Omega_0y, Omega_0z, dx, x0, xe);
 	task_2->Solve_Task_3(Initial_velocity, Initial_position, Out_vx, Out_vy, Out_vz, Out_px, Out_py, Out_pz, dx, x0, xe);
-
+	//Something seems off with the omega values
 	task_3->Solve_Task_5(Out_Omx, Out_Omy, Out_Omz, Out_px, Out_py, Out_pz, Out_vx, Out_vy, Out_vz,dx,x0,xe, Final_Out);
 
 	//std::variant <std::vector<std::array<double, 3>>, std::vector<double>> Output;
