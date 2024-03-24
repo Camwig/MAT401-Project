@@ -250,6 +250,7 @@ void Task_4()
 
 	std::vector<double> Output_Time = maths->Generate_Half_open_interval(dx, x0, xe);
 
+	//FUCKING IVEISCERATE THIS WRITING AND PRINTING PLEASE!!!!
 
 	std::printf("Velocity X\n");
 	std::cout << std::endl;
@@ -493,7 +494,8 @@ void Task_5_()
 	std::vector<std::vector<double>> Out_Omz;
 
 	std::array<double, 3> Initial_velocity = { 0,0,200 };
-	std::array<double, 3> Initial_position = { 0,(3*R)/4,0 };
+	std::array<double, 3> Initial_position = { 0,0,0 };
+	std::array<double, 3> Initial_position_2 = { 0,(3*R)/4,0 };
 
 	std::vector<std::vector<double>> Out_vx;
 	std::vector<std::vector<double>> Out_vy;
@@ -635,6 +637,8 @@ void Task_5_()
 
 int main()
 {
+	//FUCKING IVEISCERATE THIS WRITING AND PRINTING PLEASE!!!!
+
 	//Task_2();
 	//Task_4();
 	Task_5_();

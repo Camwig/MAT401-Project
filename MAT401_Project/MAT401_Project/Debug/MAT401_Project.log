@@ -1,55 +1,55 @@
 ﻿  Task_5.cpp
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(74,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(76,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(83,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(85,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(86,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(88,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(95,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(104,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(106,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(107,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(109,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(116,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(118,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(125,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(127,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(138,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(140,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(147,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(149,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(156,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(158,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(183,38): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(183,66): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(183,94): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(183,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(186,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(188,25): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(188,29): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(128,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(130,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(137,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(139,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(150,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(152,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(159,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(161,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(168,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(170,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(195,38): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(195,66): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(195,94): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(195,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(197,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(200,25): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(200,29): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=double
           ]
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(189,24): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(189,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(201,24): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(201,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=double
           ]
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(190,24): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(190,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(202,24): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(202,28): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=double
           ]
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(194,16): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(194,35): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(195,16): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(195,35): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,16): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,35): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(206,26): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(207,26): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(208,26): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(222,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(223,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(224,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(224,57): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(224,69): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(224,81): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(230,6): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(231,6): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(232,6): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(239,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(239,35): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(240,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(240,35): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(241,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(241,35): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
   MAT401_Project.vcxproj -> C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\Debug\MAT401_Project.exe

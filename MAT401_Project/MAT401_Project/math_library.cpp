@@ -68,17 +68,21 @@ std::vector<std::vector<double>> math_library::Matrix_multiplication(std::vector
 	//	}
 	//}
 
-	for (int j = 0; j < R1; j++)
-	{
-		//float value = 0;
-		//rslt[0][R2] = (Matrix_1[0][1] * Matrix_2[i][j]);
-		for (int k = 0; k < C2; k++)
-		{
-			rslt[j][0] += Matrix_1[k][0] * Matrix_2[j][k];
-			//rslt[j][0];
-		}
+	//for (int j = 0; j < R1; j++)
+	//{
+	//	//float value = 0;
+	//	//rslt[0][R2] = (Matrix_1[0][1] * Matrix_2[i][j]);
+	//	for (int k = 0; k < C2; k++)
+	//	{
+	//		rslt[j][0] += Matrix_1[k][0] * Matrix_2[j][k];
+	//		//rslt[j][0];
+	//	}
 
-	}
+	//}
+
+	rslt[0][0] = (Matrix_1[0][0] * Matrix_2[0][0]) + (Matrix_1[1][0] * Matrix_2[0][1]) + (Matrix_1[2][0] * Matrix_2[0][2]);
+	rslt[1][0] = (Matrix_1[0][0] * Matrix_2[1][0]) + (Matrix_1[1][0] * Matrix_2[1][1]) + (Matrix_1[2][0] * Matrix_2[1][2]);
+	rslt[2][0] = (Matrix_1[0][0] * Matrix_2[2][0]) + (Matrix_1[1][0] * Matrix_2[2][1]) + (Matrix_1[2][0] * Matrix_2[2][2]);
 
 	return rslt;
 
