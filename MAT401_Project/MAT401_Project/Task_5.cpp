@@ -50,7 +50,7 @@ void Task_5::Set_rotation_matrix(double alpha, double beta, double gamma, double
 }
 
 //Pass in by refrence so Im not copying all this stuff over constantly
-void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector<std::vector<double>>& Omega_y, std::vector<std::vector<double>>& Omega_z, std::vector<std::vector<double>>& Position_x, std::vector<std::vector<double>>& Position_y, std::vector<std::vector<double>>& Position_z, std::vector<std::vector<double>>& Velocity_x, std::vector<std::vector<double>>& Velocity_y, std::vector<std::vector<double>>& Velocity_z, double Step, double Start, double End, std::array<std::vector<double>, 3>& Output)
+void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector<std::vector<double>>& Omega_y, std::vector<std::vector<double>>& Omega_z, std::vector<std::vector<double>>& Position_x, std::vector<std::vector<double>>& Position_y, std::vector<std::vector<double>>& Position_z, std::vector<std::vector<double>>& Velocity_x, std::vector<std::vector<double>>& Velocity_y, std::vector<std::vector<double>>& Velocity_z, double Step, double Start, double End, std::array<std::vector<double>, 3>& Output, std::array<double, 3> Initial_position_)
 {
 	//std::vector<double> Times = maths_->Generate_Half_open_interval(Step, Start, End);
 
@@ -59,17 +59,17 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 	std::vector<double> New_output_y = maths_->Generate_zeros(End, Step);
 	std::vector<double> New_output_z = maths_->Generate_zeros(End, Step);
 
-	New_output_x[0] = 0;
-	New_output_y[0] = 0.75;
-	New_output_z[0] = 0;
+	New_output_x[0] = Initial_position_[0];
+	New_output_y[0] = Initial_position_[1];
+	New_output_z[0] = Initial_position_[2];
 
 	//std::vector<double> px = maths_->Generate_zeros(End, Step);// Will need to figure out a way to fill this with zeroes
 	//std::vector<double> py = maths_->Generate_zeros(End, Step);
 	//std::vector<double> pz = maths_->Generate_zeros(End, Step);
 
-	double px = 0,
-	py = 0.75,
-	pz = 0;
+	double px = Initial_position_[0],
+	py = Initial_position_[1],
+	pz = Initial_position_[2];
 
 	std::array<std::vector<double>,3> Resultant;
 
