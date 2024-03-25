@@ -1,35 +1,35 @@
-﻿  Task_5.cpp
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(86,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(88,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(95,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(107,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(109,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(116,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(118,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(128,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(130,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(137,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(139,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(150,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(152,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(159,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(161,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(168,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(170,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,42): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,62): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,86): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,108): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,132): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(196,154): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(201,32): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(202,31): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(203,31): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(238,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(238,36): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(239,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(239,36): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(240,17): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Task_5.cpp(240,36): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+﻿  Source.cpp
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(65,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(67,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(82,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(95,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(122,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(139,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(156,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(258,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(260,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(274,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(276,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(290,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(292,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(306,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(308,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(322,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(324,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(338,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(340,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(367,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(384,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(401,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(418,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(435,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(452,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(530,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(542,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(554,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(579,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(596,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\MAT401_Project\Source.cpp(613,20): warning C4018: '<': signed/unsigned mismatch
   MAT401_Project.vcxproj -> C:\Users\The-w\Documents\University Year 4 Term 1\MAT401 - Applied Mathematics 4\MAT401-Project\MAT401_Project\Debug\MAT401_Project.exe

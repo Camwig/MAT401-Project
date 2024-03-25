@@ -28,8 +28,8 @@ void Task_2()
 
 	double y0 = 0.0,
 		x0 = 0.0,
-		xe = /*20.0*/5.0,
-		dx = /*0.1;*/1.0;
+		xe = 20.0,
+		dx = 0.1;;
 
 	//std::vector<std::vector<float>> vect;
 	//vect = r.RK4(x0, y0, xe, dx);
@@ -218,8 +218,8 @@ void Task_4()
 
 	double y0 = 0.0,
 		x0 = 0.0,
-		xe = /*20.0*/5.0,
-		dx = /*0.1;*/1.0;
+		xe = 20.0,
+		dx = 0.1;
 
 	std::array<double, 3> Initial_velocity = { 0,0,200 };
 	std::array<double, 3> Initial_position = { 0,0,0 };
@@ -639,8 +639,8 @@ int main()
 {
 	//FUCKING IVEISCERATE THIS WRITING AND PRINTING PLEASE!!!!
 
-	//Task_2();
+	Task_2();
 	//Task_4();
-	Task_5_();
+	//Task_5_();
 	return 0;
 }

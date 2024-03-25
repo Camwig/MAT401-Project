@@ -50,7 +50,7 @@ void Task_3_and_4::Solve_Task_3(std::array<double, 3> Initial_velocity, std::arr
 	if (Step < 1)
 		Multiple = 1 / Step;
 
-	for (double i = (Start + Step) * Multiple; i < (End * Multiple); i += (Step * Multiple))
+	for (double i = (Start + Step) * Multiple; i <= (End * Multiple); i += (Step * Multiple))
 	{
 		//Semi-implicit Euler
 		velocity[0][i] = Semi_Implict_Euler(velocity[0][i-1],Gravity[0],Step);
