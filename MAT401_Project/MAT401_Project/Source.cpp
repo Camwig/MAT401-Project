@@ -12,7 +12,10 @@
 #include "Task_3_and_4.h"
 #include "Task_5.h"
 
+#include "Printer.h"
+
 math_library* maths;
+Printer* print_;
 
 void Task_2(double x0,double xe,double dx, double M, double R, double H, double Omega[3])
 {
@@ -31,59 +34,7 @@ void Task_2(double x0,double xe,double dx, double M, double R, double H, double 
 
 	std::printf("Generated values\n");
 
-	std::ofstream my_file("test.csv");
-
-	my_file << std::setprecision(10);
-
-	my_file << "Omega X";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_x[0].size(); i++)
-	{
-		my_file << Out_x[0][i] << ",";
-		my_file << Out_x[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Omega Y";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_y[0].size(); i++)
-	{
-		my_file << Out_y[0][i] << ",";
-		my_file << Out_y[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Omega Z";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_z[0].size(); i++)
-	{
-		my_file << Out_z[0][i] << ",";
-		my_file << Out_z[1][i] << std::endl;
-	}
-
-	my_file.close();
+	print_->Write_to_file(Out_x[0],std::string("Omega X"), Out_y[0], std::string("Omega Y"), Out_z[0], std::string("Omega Z"),Out_x[1]);
 
 	task_ = nullptr;
 	delete task_;
@@ -106,113 +57,7 @@ void Task_4(double x0, double xe, double dx, std::array<double, 3> Initial_veloc
 
 	std::printf("Generated values\n");
 
-	std::ofstream my_file("test.csv");
-
-	my_file << std::setprecision(10);
-
-	my_file << "Velocity X";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_vx[0].size(); i++)
-	{
-		my_file << Out_vx[0][i] << ",";
-		my_file << Out_vx[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Velocity Y";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_vy[0].size(); i++)
-	{
-		my_file << Out_vy[0][i] << ",";
-		my_file << Out_vy[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Velocity Z";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_vz[0].size(); i++)
-	{
-		my_file << Out_vz[0][i] << ",";
-		my_file << Out_vz[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Diplacement X";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_px[0].size(); i++)
-	{
-		my_file << Out_px[0][i] << ",";
-		my_file << Out_px[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Diplacement Y";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_py[0].size(); i++)
-	{
-		my_file << Out_py[0][i] << ",";
-		my_file << Out_py[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Diplacement Z";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Out_pz[0].size(); i++)
-	{
-		my_file << Out_pz[0][i] << ",";
-		my_file << Out_pz[1][i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file.close();
+	print_->Write_to_file(Out_vx[0], std::string("Velocity X"), Out_vy[0], std::string("Velocity Y"), Out_vz[0], std::string("Velocity Z"), Out_px[0], std::string("Diplacement X"), Out_py[0], std::string("Diplacement Y"), Out_pz[0], std::string("Diplacement Z"), Out_vx[1]);
 
 	task_ = nullptr;
 	delete task_;
@@ -249,66 +94,9 @@ void Task_5_(double x0, double xe, double dx, std::array<double, 3> Initial_velo
 
 	std::cout << std::setprecision(10);
 
-	std::vector<double> Output_Time = maths->Generate_Half_open_interval(dx, x0, xe);
-
 	std::printf("Generated values\n");
 
-	std::ofstream my_file("test.csv");
-
-	my_file << std::setprecision(10);
-
-	my_file << "Diplacement X";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Final_Out[0].size(); i++)
-	{
-		my_file << Final_Out[0].at(i) << ",";
-		my_file << Output_Time[i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Diplacement Y";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Final_Out[1].size(); i++)
-	{
-		my_file << Final_Out[1].at(i) << ",";
-		my_file << Output_Time[i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file << "Diplacement Z";
-
-	my_file << ",";
-
-	my_file << "Time";
-
-	my_file << std::endl;
-
-	for (int i = 0; i < Final_Out[2].size(); i++)
-	{
-		my_file << Final_Out[2].at(i) << ",";
-		my_file << Output_Time[i] << std::endl;
-	}
-
-	my_file << std::endl;
-	my_file << std::endl;
-
-	my_file.close();
+	print_->Write_to_file(Final_Out[0], std::string("Diplacement X"), Final_Out[1], std::string("Diplacement Y"), Final_Out[2], std::string("Diplacement Z"), Out_Omx[1]);
 
 	task_1 = nullptr;
 	delete task_1;
@@ -323,9 +111,9 @@ void Task_5_(double x0, double xe, double dx, std::array<double, 3> Initial_velo
 
 int main()
 {
-	//FUCKING IVEISCERATE THIS WRITING AND PRINTING PLEASE!!!!
 
 	maths = new math_library();
+	print_ = new Printer();
 
 	double x0 = 0.0,
 	xe = 20.0,
@@ -340,20 +128,62 @@ int main()
 
 	double Omega[3] = { 3,1,2 };
 
-	//Task_2(x0,xe,dx,M,R,H,Omega);
-
 	//Task 3 and 4
 
 	std::array<double, 3> Initial_velocity = { 0,0,200 };
 	std::array<double, 3> Initial_Com_position = { 0,0,0 };
 	std::array<double, 3> Initial_position_ = { 0,(3*R)/4,0 };
 
+	int input;
+	bool Setup = false;
+
+	std::cout << "Which Task would you like to solve : ";
+	std::cin >> input;
+
+	while (!Setup)
+	{
+
+		if (input > 0 && input < 6)
+		{
+			Setup = true;
+		}
+		else
+		{
+			std::cout << "Please re-enter a task between 1 and 5 Task would you like to solve : ";
+			std::cin >> input;
+		}
+	}
+
+	switch (input)
+	{
+	case 1:
+		Task_2(x0, xe, dx, M, R, H, Omega);
+		break;
+	case 2:
+		Task_2(x0, xe, dx, M, R, H, Omega);
+		break;
+	case 3:
+		Task_4(x0, xe, dx, Initial_velocity, Initial_Com_position);
+		break;
+	case 4:
+		Task_4(x0, xe, dx, Initial_velocity, Initial_Com_position);
+		break;
+	case 5:
+		Task_5_(x0, xe, dx, Initial_velocity, Initial_Com_position, Initial_position_, Omega, M, R, H);
+		break;
+	}
+
+	//Task_2(x0, xe, dx, M, R, H, Omega);
+
 	//Task_4(x0,xe,dx, Initial_velocity, Initial_Com_position);
 
-	Task_5_(x0,xe,dx,Initial_velocity,Initial_Com_position,Initial_position_,Omega,M,R,H);
+	//Task_5_(x0,xe,dx,Initial_velocity,Initial_Com_position,Initial_position_,Omega,M,R,H);
 
 	maths = nullptr;
 	delete maths;
+
+	print_ = nullptr;
+	delete print_;
 
 	return 0;
 }
