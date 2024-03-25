@@ -10,6 +10,7 @@ Printer::~Printer()
 
 }
 
+//Writes out the provided vectors to the test.csv file
 void Printer::Write_to_file(std::vector<double>& Output_1, std::string Out_name_1, std::vector<double>& Output_2, std::string Out_name_2, std::vector<double>& Output_3, std::string Out_name_3, std::vector<double>& Time_out)
 {
 	std::ofstream my_file("test.csv");
@@ -70,6 +71,7 @@ void Printer::Write_to_file(std::vector<double>& Output_1, std::string Out_name_
 	my_file.close();
 }
 
+//Writes out the provided vectors to the test.csv file
 void Printer::Write_to_file(std::vector<double>& Output_1, std::string Out_name_1, std::vector<double>& Output_2, std::string Out_name_2, std::vector<double>& Output_3, std::string Out_name_3, std::vector<double>& Output_4, std::string Out_name_4, std::vector<double>& Output_5, std::string Out_name_5, std::vector<double>& Output_6, std::string Out_name_6, std::vector<double>& Time_out)
 {
 	std::ofstream my_file("test.csv");

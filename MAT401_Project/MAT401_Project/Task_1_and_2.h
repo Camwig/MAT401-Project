@@ -17,6 +17,7 @@ private:
 
 	std::array<double, 3> RK4_Task1(std::array<double,3>&, double, double,double,double);
 
+	//Inline function to solve the provide equation of task 1 and 2
 	double inline Equation(double upslion, double Omega_1, double Omega_2)
 	{
 		return -1 * (upslion * Omega_1 * Omega_2);
@@ -24,10 +25,8 @@ private:
 
 	std::array<std::array<double, 3>, 3> Inertia_Tensor;
 
-	std::array<double, 3> Centre_of_mass;
-
 	std::array<double, 3> Upsilon;
-
+	//Vectors to hold the Omega values
 	std::vector<double> Omega_X;
 	std::vector<double> Omega_Y;
 	std::vector<double> Omega_Z;

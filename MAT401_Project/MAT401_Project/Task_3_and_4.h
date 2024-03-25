@@ -16,6 +16,7 @@ public:
 private:
 	std::array<std::vector<double>, 3> velocity;
 	std::array<std::vector<double>, 3> position;
+	//Sets the gravity value
 	const std::array<double, 3> Gravity = { 0,0,-9.8f };
 	math_library* maths_;
 };

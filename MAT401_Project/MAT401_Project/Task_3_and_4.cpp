@@ -12,11 +12,14 @@ Task_3_and_4::~Task_3_and_4()
 	delete maths_;
 }
 
+//Init function to set the intial values for the x,y and z of the velocity and position values
 void Task_3_and_4::Init(std::array<double, 3> Initial_velocity, std::array<double, 3> Initial_position)
 {
-
+	//x at 0		  Inital value x
 	velocity[0][0] = Initial_velocity[0];
+	//y at 0		  Inital value y
 	velocity[1][0] = Initial_velocity[1];
+	//z at 0		  Inital value z
 	velocity[2][0] = Initial_velocity[2];
 
 	position[0][0] = Initial_position[0];
@@ -46,7 +49,7 @@ void Task_3_and_4::Solve_Task_3(std::array<double, 3> Initial_velocity, std::arr
 	Init(Initial_velocity,Initial_position);
 
 	double Multiple = 1;
-
+	//If the Stepsize is less than one we use the multipe to still move along the vector based on the value increased to where there are no decimal points
 	if (Step < 1)
 		Multiple = 1 / Step;
 
@@ -62,7 +65,7 @@ void Task_3_and_4::Solve_Task_3(std::array<double, 3> Initial_velocity, std::arr
 		velocity[2][i] = Semi_Implict_Euler(velocity[2][i - 1], Gravity[2], Step);
 		position[2][i] = Semi_Implict_Euler(position[2][i - 1], velocity[2][i], Step);
 	}
-
+	//Output the Velocity and positional values aswell as the Time values with them
 	Out_Vx = { velocity[0],Times };
 	Out_Vy = { velocity[1],Times };
 	Out_Vz = { velocity[2],Times };

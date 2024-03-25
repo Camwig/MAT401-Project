@@ -16,57 +16,18 @@ Task_5::~Task_5()
 	delete maths_;
 }
 
-//Will need to fill this out but I can do that later I just need to make sure I get the basics correct first
-
+//Sets the values of the Rotation Matrix
 void Task_5::Set_rotation_matrix(double alpha, double beta, double gamma, double theta)
 {
-	//Rotation_Matrix = { (pow(alpha,2))*(1 - cos(theta)) + cos(theta),				(alpha*beta)*(1-cos(theta)+(gamma*sin(theta))),				(alpha * gamma) * (1 - cos(theta) + (beta * sin(theta))),	0,
-	//					(alpha * beta)* (1 - cos(theta) + (gamma * sin(theta))),	(pow(beta,2))* (1 - cos(theta)) + cos(theta),				(beta * gamma)* (1 - cos(theta) + (alpha * sin(theta))),	0,
-	//					(alpha * gamma)* (1 - cos(theta) + (beta * sin(theta))),	(beta * gamma)* (1 - cos(theta) + (alpha * sin(theta))),	(pow(gamma,2))* (1 - cos(theta)) + cos(theta),				0,
-	//					0,															0,											0,																			1};
-	
-	//Should be okay as I beleive that sin and cos are expecting radian based inputs for themselves but rember that is the case
-
-	//Issue with filling the rotation matrix
-
-	//Rotation_Matrix[0][0] = (pow(alpha, 2)) * (1 - cos(theta)) + cos(theta);
-	//Rotation_Matrix[0][1] = (alpha * beta) * (1 - cos(theta) + (gamma * sin(theta)));
-	//Rotation_Matrix[0][2] = (alpha * gamma) * (1 - cos(theta) + (beta * sin(theta)));
-
-	//Rotation_Matrix[1][0] = (alpha * beta) * (1 - cos(theta) + (gamma * sin(theta)));
-	//Rotation_Matrix[1][1] = (pow(beta, 2)) * (1 - cos(theta)) + cos(theta);
-	//Rotation_Matrix[1][2] = (beta * gamma) * (1 - cos(theta) + (alpha * sin(theta)));
-
-	//Rotation_Matrix[2][0] = (alpha * gamma) * (1 - cos(theta) + (beta * sin(theta)));
-	//Rotation_Matrix[2][1] = (beta * gamma) * (1 - cos(theta) + (alpha * sin(theta)));
-	//Rotation_Matrix[2][2] = (pow(gamma, 2)) * (1 - cos(theta)) + cos(theta);
-
-
 	Rotation_Matrix	=	{{ ((alpha*alpha) * (1 - cos(theta))) + cos(theta),				((alpha * beta) * (1 - cos(theta))) - (gamma * sin(theta)),					((alpha * gamma) * (1 - cos(theta)) + (beta * sin(theta))) },
 						{ ((alpha * beta) * (1 - cos(theta))) + (gamma * sin(theta)),		((beta*beta) * (1 - cos(theta))) + cos(theta),								((beta * gamma) * (1 - cos(theta))) - (alpha * sin(theta)) },
 						{ ((alpha * gamma) * (1 - cos(theta))) - (beta * sin(theta)),		((beta * gamma) * (1 - cos(theta))) + (alpha * sin(theta)),					((gamma*gamma) * (1 - cos(theta))) + cos(theta) }};
 
-	//Rotation_Matrix.at[0];
 }
 
-//Pass in by refrence so Im not copying all this stuff over constantly
+
 void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector<std::vector<double>>& Omega_y, std::vector<std::vector<double>>& Omega_z, std::vector<std::vector<double>>& Position_x, std::vector<std::vector<double>>& Position_y, std::vector<std::vector<double>>& Position_z, double Step, double Start, double End, std::array<std::vector<double>, 3>& Output, std::array<double, 3> Initial_position_)
 {
-	//std::vector<double> Times = maths_->Generate_Half_open_interval(Step, Start, End);
-
-	//Shouldnt use these here will need to use something with three sets of vectors
-	//std::vector<double> New_output_x = maths_->Generate_zeros(End, Step);// Will need to figure out a way to fill this with zeroes
-	//std::vector<double> New_output_y = maths_->Generate_zeros(End, Step);
-	//std::vector<double> New_output_z = maths_->Generate_zeros(End, Step);
-
-	//New_output_x[0] = Initial_position_[0];
-	//New_output_y[0] = Initial_position_[1];
-	//New_output_z[0] = Initial_position_[2];
-
-	//std::vector<double> px = maths_->Generate_zeros(End, Step);// Will need to figure out a way to fill this with zeroes
-	//std::vector<double> py = maths_->Generate_zeros(End, Step);
-	//std::vector<double> pz = maths_->Generate_zeros(End, Step);
-
 	double px = Initial_position_[0],
 	py = Initial_position_[1],
 	pz = Initial_position_[2];
@@ -77,128 +38,23 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 	Resultant[1] = maths_->Generate_zeros(End, Step);
 	Resultant[2] = maths_->Generate_zeros(End, Step);
 
+	//x at 0		  Inital value x
 	Resultant[0][0] = Initial_position_[0];
+	//y at 0		  Inital value y
 	Resultant[1][0] = Initial_position_[1];
+	//z at 0		  Inital value z
 	Resultant[2][0] = Initial_position_[2];
 
-	//This below is disgusting and should be changed please I beg you!!!!!
-	//--------------------------------------------------------------------------
-
-	//std::vector<double> pos_values_x = maths_->Generate_zeros(End, Step);
-	////std::vector<double> vel_values_x = maths_->Generate_zeros(End, Step);
-
-	//for (int i = 0; i < Position_x.size(); i++)
-	//{
-	//	for (int j = 0; j < Position_x[i].size(); j++)
-	//	{
-	//		pos_values_x[j] = Position_x[i][j];
-	//	}
-	//	break;
-	//}
-
-	//for (int i = 0; i < Velocity_x.size(); i++)
-	//{
-	//	for (int j = 0; j < Velocity_x[i].size(); j++)
-	//	{
-	//		vel_values_x[j] = Velocity_x[i][j];
-	//	}
-	//	break;
-	//}
-
-	//std::vector<double> pos_values_y = maths_->Generate_zeros(End, Step);
-	//std::vector<double> vel_values_y = maths_->Generate_zeros(End, Step);
-
-	//for (int i = 0; i < Position_y.size(); i++)
-	//{
-	//	for (int j = 0; j < Position_y[i].size(); j++)
-	//	{
-	//		pos_values_y[j] = Position_y[i][j];
-	//	}
-	//	break;
-	//}
-
-	//for (int i = 0; i < Velocity_y.size(); i++)
-	//{
-	//	for (int j = 0; j < Velocity_y[i].size(); j++)
-	//	{
-	//		vel_values_y[j] = Velocity_y[i][j];
-	//	}
-	//	break;
-	//}
-
-	//std::vector<double> pos_values_z = maths_->Generate_zeros(End, Step);
-	////std::vector<double> vel_values_z = maths_->Generate_zeros(End, Step);
-
-	//for (int i = 0; i < Position_z.size(); i++)
-	//{
-	//	for (int j = 0; j < Position_z[i].size(); j++)
-	//	{
-	//		pos_values_z[j] = Position_z[i][j];
-	//	}
-	//	break;
-	//}
-
-	//for (int i = 0; i < Velocity_z.size(); i++)
-	//{
-	//	for (int j = 0; j < Velocity_z[i].size(); j++)
-	//	{
-	//		vel_values_z[j] = Velocity_z[i][j];
-	//	}
-	//	break;
-	//}
-
-	//std::vector<double> ome_values_x = maths_->Generate_zeros(End, Step);
-	//std::vector<double> ome_values_y = maths_->Generate_zeros(End, Step);
-	//std::vector<double> ome_values_z = maths_->Generate_zeros(End, Step);
-
-	//for (int i = 0; i < Omega_x.size(); i++)
-	//{
-	//	for (int j = 0; j < Omega_x[i].size(); j++)
-	//	{
-	//		ome_values_x[j] = Omega_x[i][j];
-	//	}
-	//	break;
-	//}
-
-	//for (int i = 0; i < Omega_y.size(); i++)
-	//{
-	//	for (int j = 0; j < Omega_y[i].size(); j++)
-	//	{
-	//		ome_values_y[j] = Omega_y[i][j];
-	//	}
-	//	break;
-	//}
-
-	//for (int i = 0; i < Omega_z.size(); i++)
-	//{
-	//	for (int j = 0; j < Omega_z[i].size(); j++)
-	//	{
-	//		ome_values_z[j] = Omega_z[i][j];
-	//	}
-	//	break;
-	//}
-
 	double Multiple = 1;
-
+	//If the Stepsize is less than one we use the multipe to still move along the vector based on the value increased to where there are no decimal points
 	if (Step < 1)
 		Multiple = 1 / Step;
 
-	//--------------------------------------------------------------------------
-	//float theta, alpha, beta, gamma;
-
 	for (double i = (Start + Step) * Multiple; i <= (End * Multiple); i += (Step * Multiple))
 	{
-		//Need to do the full matrix additive stuff but it makes more sense to do all the x,y and z values as matrix at a time
-
-		//(Rotation_Matrix * New_output_x[i - 1])
-
-		//Need to setup the rotation matrix
-		
-
+		//Calculate the magnitude of the vector to get the theta,alpha,beta and gamma values
 		double magnitude = sqrt((Omega_x[0][i-1]* Omega_x[0][i - 1]) + (Omega_y[0][i - 1] * Omega_y[0][i - 1]) + (Omega_z[0][i - 1] * Omega_z[0][i - 1]));
-		//Theta outputs as radians
 		double theta = magnitude * (Step);
-		//theta = magnitude*(i);
 
 		double alpha = Omega_x[0][i - 1] / magnitude;
 		double beta = Omega_y[0][i - 1] / magnitude;
@@ -206,76 +62,19 @@ void Task_5::Solve_Task_5(std::vector<std::vector<double>>& Omega_x, std::vector
 
 		Set_rotation_matrix(alpha,beta,gamma,theta);
 
-		//New_output_x[i] = pos_values_x[i-1] /*+ (Step * vel_values_x[i])*/;
-		//New_output_y[i] = pos_values_y[i-1] /*+ (Step * vel_values_y[i])*/;
-		//New_output_z[i] = pos_values_z[i-1] /*+ (Step * vel_values_z[i])*/;
-
-		//Something is wrong here
-
-		//New_output_x[i] = ome_values_x[i - 1] /*+ (Step * vel_values_x[i])*/;
-		//New_output_y[i] = ome_values_y[i - 1] /*+ (Step * vel_values_y[i])*/;
-		//New_output_y[i] = ome_values_z[i - 1] /*+ (Step * vel_values_z[i])*/;
-
-		//std::vector<double> Row = maths_->Generate_zeros(2);
-
-		//Row[0] = px[i-1];
-		//Row[1] = py[i-1];
-		//Row[2] = pz[i-1];
-
-		//std::vector<double> Column = maths_->Generate_zeros(0);
-
 		std::vector<std::vector<double>> New_Output = { {px},{py},{pz} };
-
+		//Calculate the result of the matrix multiplication between the New output(position of the object) matrix and the rotation matrix
 		std::vector<std::vector<double>> Result = maths_->Matrix_multiplication(New_Output, Rotation_Matrix,3,1,3,3);
 
+		//Set the new p values to be that of the newly calculated the rotational position
 		px = Result[0][0];
 		py = Result[1][0];
 		pz = Result[2][0];
 
-
-		//Issue here
-
-		//for (int z = 0; z < Result.size(); i++)
-		//{
-			Resultant[0][i] = Position_x[0][i-1]/*pos_values_x[i-1]*/ + px;
-			Resultant[1][i] = Position_y[0][i - 1] + py;
-			Resultant[2][i] = Position_z[0][i - 1] + pz;
-		//}
-
-		// r(timestep) = Position(at timestep)(Task 3) + timestep*(velocity)(Task 3) + RotationMatrix*r(n-1) - Should all in all result in a 3 row matrix with x,y and z
-
+		Resultant[0][i] = Position_x[0][i - 1] + px;
+		Resultant[1][i] = Position_y[0][i - 1] + py;
+		Resultant[2][i] = Position_z[0][i - 1] + pz;
 	}
 
-	//Resultant[0] = New_output_x;
-	//Resultant[1] = New_output_y;
-	//Resultant[2] = New_output_z;
-
 	Output = Resultant;
-
-
-	//omega = {alpha,beta,gamma}
-
-	//r = r(cm,dt) + dt*vcm + RotationMatrix*unitvector of r(dt) 
-	//r = 1.		 5.		  2.3.4.			 
-
-	//Before any of this will need to use Task 1 and 3 for those values
-
-	//1. Centre of mass position at time step point Courtesy of task 3
-
-	//2. Theta value = maginitude of omega * the timestep point omega courtesy of task 1.
-
-	//3.alpha beta and gamma are equal to the omega values(x,y,z) each divided by the magnitude for a unit vector
-
-	//4. Rotation matrix * alpha ,beta and gamma vector
-	//		Will need to figure out a way to create a matrix multiplication thing hopefully the standard library has one
-
-	//5. timestep point multiplied by the velocity at the time step position cuortesy of task 3.
-
-	//
-	// r(timestep) = Position(at timestep)(Task 3) + timestep*(velocity)(Task 3) + RotationMatrix*r(n-1)
-	//
-
-	//Needs to just be looped over no real fancy method needed
-
-
 }
